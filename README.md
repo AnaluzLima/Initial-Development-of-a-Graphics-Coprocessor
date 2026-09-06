@@ -210,7 +210,7 @@ tipo push-button <code>(KEY[3:0])</code> da placa, permitindo injetar e testar a
 ---
 
 <details>
-<summary><h2>Recursos Utilizados</h2></summary>
+<summary><h2>Recursos Utilizados da FPGA</h2></summary>
 
 O desenvolvimento e os testes físicos foram realizados na placa DE1-SoC (FPGA Cyclone V 5CSEMA5F31C6), apresentando a seguinte utilização de recursos 
 após a síntese unificada no Quartus Prime:
@@ -238,7 +238,7 @@ após a síntese unificada no Quartus Prime:
 <summary><h2>Gargalos e Limitações</h2></summary>
 
 - **Comportamento de Borda nos Polígonos**: O polígono possui limitação de colisão com as bordas da tela lógica de 320x240. Porém, caso o polígono seja encostado na borda e o seu tipo seja
-- alterado nas chaves, ele pode ultrapassar o limite da tela. Se o usuário movimentá-lo para dentro da tela e tentar tirá-lo novamente, o limitador volta a atuar e impede a saída.
+  alterado nas chaves, ele pode ultrapassar o limite da tela. Se o usuário movimentá-lo para dentro da tela e tentar tirá-lo novamente, o limitador volta a atuar e impede a saída.
 - **Capacidade Fixa de Instâncias**: O hardware comporta a exibição simultânea de no máximo 8 polígonos e 32 sprites em paralelo.
 - **Cenário Estático**: Ainda não foi implementado um background dinâmico ou diferentes opções de mapas além do tilemap padrão de 40x30 carregado no arquivo mif.
 - **Sprites Fixos na ROM**: Os padrões visuais dos sprites são estáticos, ficando gravados diretamente na memória ROM interna sem possibilidade de substituição por software em tempo de execução.
@@ -422,5 +422,19 @@ após a síntese unificada no Quartus Prime:
 
 Este trabalho corresponde apenas à primeira fase do projeto de desenvolvimento do coprocessador gráfico, sendo notável o bom funcionamento da arquitetura criada e as possíveis melhorias
 para as fases posteriores. Nelas, haverá a construção da Instruction Set Architecture (ISA) e, por último, a implementação do jogo em linguagem C. 
+
+</details>
+
+
+---
+
+<details>
+<summary><h2>Referências </h2></summary>
+
+- FPGA Implementation for Real-Time Background Subtraction Based on Horprasert Model: https://www.mdpi.com/1424-8220/12/1/585 
+- GPU Design on FPGA: https://pt.slideshare.net/slideshow/gpu-design-on-fpga/63122816
+- Minimalist GPU on an FPGA: https://www.lakernewhouse.com/assets/writing/minimalist-gpu-on-an-fpga.pdf
+- Coprocessor Computing with FPGA and GPU: https://ieeexplore.ieee.org/document/4755892
+- Computer Organization and Design - David A. Patterson; John L. Hennessy
 
 </details>
